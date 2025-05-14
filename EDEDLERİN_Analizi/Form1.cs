@@ -73,5 +73,21 @@ namespace EDEDLERİN_Analizi
             else
                 label1.Text = "Bu ədəd nə kvadrat, nə də kubdur.";
         }
+
+        /// <summary>
+        /// Ədədin 5-ə bölünüb bölünmədiyini yoxlayır.
+        /// </summary>
+        private void btnBolunme5_Click(object sender, EventArgs e)
+        {
+            
+            if (!TryGetInput(out int number))
+            {
+                MessageBox.Show("Zəhmət olmasa düzgün tam ədəd daxil edin.");
+                return;
+            }
+
+            label1.Text = number % 5 == 0 ? "5-ə tam bölünür." : "5-ə qalıqla bölünür.";
+        }
     }
 }
+

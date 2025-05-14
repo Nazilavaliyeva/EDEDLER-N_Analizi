@@ -122,6 +122,7 @@
             this.btnBolunme5.TabIndex = 9;
             this.btnBolunme5.Text = "5 Bolunme";
             this.btnBolunme5.UseVisualStyleBackColor = true;
+            this.btnBolunme5.Click += new System.EventHandler(this.btnBolunme5_Click);
             // 
             // btnKvadratKub
             // 
