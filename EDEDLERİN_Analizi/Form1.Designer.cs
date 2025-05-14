@@ -96,6 +96,7 @@
             this.btnTersi.TabIndex = 11;
             this.btnTersi.Text = "Ededin tersi";
             this.btnTersi.UseVisualStyleBackColor = true;
+            this.btnTersi.Click += new System.EventHandler(this.btnTersi_Click);
             // 
             // btnReqemCemi
             // 

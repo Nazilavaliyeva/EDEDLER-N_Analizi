@@ -108,6 +108,28 @@ namespace EDEDLERİN_Analizi
             }
             label1.Text = $"Rəqəmlərin cəmi:"+ sum;
         }
+        /// <summary>
+        /// Ədədin tərsini çap edir.
+        /// </summary>
+        private void btnTersi_Click(object sender, EventArgs e)
+        {
+            if (!TryGetInput(out int number))
+            {
+                MessageBox.Show("Zəhmət olmasa düzgün tam ədəd daxil edin.");
+                return;
+            }
+            bool isNegative = number < 0;
+            number = Math.Abs(number);
+
+            int reversed = 0;
+            while (number > 0)
+            {
+                reversed = reversed * 10 + number % 10;
+                number /= 10;   
+            }
+            label1.Text = "Ədədin tərsi: " + (isNegative ? "-" + reversed : reversed.ToString());
+
+        }
     }
 }
 
