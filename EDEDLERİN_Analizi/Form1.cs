@@ -130,6 +130,29 @@ namespace EDEDLERİN_Analizi
             label1.Text = "Ədədin tərsi: " + (isNegative ? "-" + reversed : reversed.ToString());
 
         }
+
+        /// <summary>
+        /// Ədədin sadə və ya mürəkkəb olduğunu müəyyən edir.
+        /// </summary>
+        private void btnSadelik_Click(object sender, EventArgs e)
+        {
+            if (!TryGetInput(out int number) || number <=1)
+            {
+                MessageBox.Show("Zəhmət olmasa 2 və yuxarı tam ədəd daxil edin.");
+                return;
+            }
+            bool isPrime = true;
+            for (int i = 2; i <= Math.Sqrt(number); i++)
+            {
+                if (number % i == 0)
+                {
+                    isPrime = false;
+                    break;
+                }
+            }
+
+            label1.Text = isPrime ? $"{number} sadə ədəddir." : $"{number} mürəkkəb ədəddir.";
+        }
     }
 }
 

@@ -83,6 +83,7 @@
             this.btnSadelik.TabIndex = 12;
             this.btnSadelik.Text = "Sade eded";
             this.btnSadelik.UseVisualStyleBackColor = true;
+            this.btnSadelik.Click += new System.EventHandler(this.btnSadelik_Click);
             // 
             // btnTersi
             // 
