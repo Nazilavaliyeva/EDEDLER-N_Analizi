@@ -109,6 +109,7 @@
             this.btnReqemCemi.TabIndex = 10;
             this.btnReqemCemi.Text = "Reqem Cemi";
             this.btnReqemCemi.UseVisualStyleBackColor = true;
+            this.btnReqemCemi.Click += new System.EventHandler(this.btnReqemCemi_Click);
             // 
             // btnBolunme5
             // 

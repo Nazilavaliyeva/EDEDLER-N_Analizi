@@ -88,6 +88,26 @@ namespace EDEDLERİN_Analizi
 
             label1.Text = number % 5 == 0 ? "5-ə tam bölünür." : "5-ə qalıqla bölünür.";
         }
+
+        /// <summary>
+        /// Ədədin rəqəmləri cəmini hesablayır.
+        /// </summary>
+        private void btnReqemCemi_Click(object sender, EventArgs e)
+        {
+            if(!TryGetInput(out int number))
+            {
+                MessageBox.Show("Zəhmət olmasa düzgün tam ədəd daxil edin.");
+                return;
+            }
+            number = Math.Abs(number);
+            int sum = 0;
+            while (number > 0)
+            {
+                sum += number % 10;
+                number /= 10;
+            }
+            label1.Text = $"Rəqəmlərin cəmi:"+ sum;
+        }
     }
 }
 
