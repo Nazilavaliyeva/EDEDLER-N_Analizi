@@ -153,6 +153,26 @@ namespace EDEDLERİN_Analizi
 
             label1.Text = isPrime ? $"{number} sadə ədəddir." : $"{number} mürəkkəb ədəddir.";
         }
+        /// <summary>
+        /// Ədədin faktorialını hesablayır.
+        /// </summary>
+        private void btnFaktorial_Click(object sender, EventArgs e)
+        {
+            if (!TryGetInput(out int number) || number < 0)
+            {
+                MessageBox.Show("Zəhmət olmasa 0 və ya müsbət tam ədəd daxil edin.");
+                return;
+            }
+
+            long factorial = 1;
+            for (int i = 2; i <= number; i++)
+            {
+                factorial *= i;
+
+            }
+
+            label1.Text = $"{number}! = {factorial}"; 
+        }
     }
 }
 

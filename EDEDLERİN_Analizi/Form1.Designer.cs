@@ -70,6 +70,7 @@
             this.btnFaktorial.TabIndex = 13;
             this.btnFaktorial.Text = "Faktorial";
             this.btnFaktorial.UseVisualStyleBackColor = true;
+            this.btnFaktorial.Click += new System.EventHandler(this.btnFaktorial_Click);
             // 
             // btnSadelik
             // 
